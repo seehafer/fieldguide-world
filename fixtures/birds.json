@@ -1,12 +1,111 @@
 [
   {
-    "name": "Big Bird",
-    "description": "A bird that is big and yellow and has a funny voice",
-    "photo_url": "http://redalertlive.com/wp-content/uploads/2013/10/Big-Bird-transgender-transexual-gay-sesame-street.jpg"
+    "name": "Steller's Jay",
+    "description": "One of two jaybirds in NorCal",
+    "photo_url": "http://farm1.staticflickr.com/70/177140208_66b72a867d_b.jpg",
+		"commonality": 100
   },
   {
-    "name": "Woody Woodpecker",
-    "description": "A woodpecker with an annoying voice",
-    "photo_url": "http://img1.wikia.nocookie.net/__cb20130806212954/jadensadventures/images/3/32/Woody-woodpecker1.jpg"
+    "name": "American Crow",
+    "description": "The American Crow (Corvus brachyrhynchos) is a large passerine bird species of the family Corvidae. It is a common bird found throughout much of North America. In the interior of the continent south of the Arctic, it is referred to as simply the 'crow'.",
+    "photo_url": "http://farm4.staticflickr.com/3110/2470003522_fd19109aec_b.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "American White Pelican",
+    "description": "Sea BIRD",
+    "photo_url": "http://farm4.staticflickr.com/3618/3400012248_3600eaee1d_o.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Allen's Hummingbird",
+    "description": "The Allen's Hummingbird (Selasphorus sasin) is a species of hummingbird. The Allen's Hummingbird is a small bird, with mature adults reaching only 3 to 3½ inches (75 to 90 mm) in length. The male Allen's has a green back and forehead, with rust-colored rufous flanks, rump, and tail. The male's throat is also an iridescent orange-red. The female and immature Allen's Hummingbirds are similarly colored, but lack the iridescent throat patch, instead having a series of speckles...",
+    "photo_url": "http://farm1.staticflickr.com/19/88506059_4b91699a75_o.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Common Raven",
+    "description": "The Common Raven (Corvus corax), also known as the Northern Raven, is a large, all-black passerine bird. Found across the Northern Hemisphere, it is the most widely distributed of all corvids. There are at least eight subspecies with little variation in appearance—although recent research has demonstrated significant genetic differences among populations from various regions. It is one of the two largest corvids, alongside the Thick-billed Raven, and is possibly the heaviest passerine bird; at maturity, the...",
+    "photo_url": "http://farm3.staticflickr.com/2039/2056438076_a7cb1f73ea_o.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "American Coot",
+    "description": "The American Coot (Fulica americana) (a.k.a. mud hen) is a bird of the family Rallidae. Though commonly mistaken to be ducks, American Coots belong to a distinct order. Unlike the webbed feet of ducks, coots have broad, lobed scales on their lower legs and toes that fold back with each step in order to facilitate walking on dry land. Coots live near water, typically inhabiting wetlands and open water bodies in North America. Groups of coots...",
+    "photo_url": "http://farm4.staticflickr.com/3430/3390640523_3de36f4665_b.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "European Starling",
+    "description": "The Common Starling (Sturnus vulgaris), also known as the European Starling or in the British Isles just the Starling, is a medium-sized passerine bird in the starling family Sturnidae. It is about 20 cm (8 in) long and has glossy black plumage, which is speckled with white at some times of year. The legs are pink and the bill is black in winter and yellow in summer; young birds have browner plumage than the adults. It is a...",
+		"fun_fact": "All European Starlings in North America are descendants of 200 individuals that were released in 1890 by a crazy guy in Central Park.",
+    "photo_url": "http://farm7.staticflickr.com/6171/6164665952_20208a7af8_b.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Mallard",
+    "description": "The Mallard (/ˈmælɑrd/ or /ˈmælərd/) or Wild Duck (Anas platyrhynchos) is a dabbling duck which breeds throughout the temperate and subtropical Americas, Europe, Asia, and North Africa, and has been introduced to New Zealand and Australia. This duck belongs to the subfamily Anatinae of the waterfowl family Anatidae.",
+    "photo_url": "http://farm4.staticflickr.com/3236/2693516589_5b8d9fed79_b.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Anna's Hummingbird",
+    "description": "Anna's Hummingbird (Calypte anna) is a medium-sized hummingbird native to the west coast of North America. This bird was named after Anna Masséna, Duchess of Rivoli.",
+    "photo_url": "http://static.inaturalist.org/photos/222494/large.jpg?1356324246",
+		"commonality": 100
+  },
+  {
+    "name": "Townsend's Warbler",
+    "description": "Townsend's Warbler (Setophaga townsendi) is a small songbird of the New World warbler family.",
+    "photo_url": "http://farm3.staticflickr.com/2148/2275869327_b92df977d2.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Mourning Dove",
+    "description": "The Mourning Dove (Zenaida macroura) is a member of the dove family (Columbidae). The bird is also called the Turtle Dove or the American Mourning Dove or Rain Dove, and formerly was known as the Carolina Pigeon or Carolina Turtledove. It is one of the most abundant and widespread of all North American birds. It is also the leading gamebird, with more than 20 million birds (up to 70 million in some years) shot annually in...",
+    "photo_url": "http://farm1.staticflickr.com/21/32054189_e9279cf071_o.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "House Sparrow",
+    "description": "The House Sparrow (Passer domesticus) is a bird of the sparrow family Passeridae, found in most parts of the world. A small bird, it has a typical length of 16 cm (6.3 in) and a weight of 24–39.5 g (0.85–1.39 oz). Females and young birds are coloured pale brown and grey, and males have brighter black, white, and brown markings. One of about 25 species in the genus Passer, the House Sparrow is native to most of Europe, the Mediterranean region,...",
+    "photo_url": "http://upload.wikimedia.org/wikipedia/commons/3/3a/Male_House_Sparrow_%28Passer_domesticus%29%2C_New_Castle%2C_Delaware.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Western Scrub-Jay",
+    "description": "The Western Scrub Jay (Aphelocoma californica), is a species of scrub jay native to western North America. It ranges from southern Washington to central Texas and central Mexico. It comprises three distinct subspecies groups, all of which may be separate species. They are California Scrub Jay (coastal), Woodhouse's Scrub Jay (interior US and northern Mexico), and Sumichrast's Scrub Jay (interior southern Mexico). The Western Scrub Jay was once lumped with the Island Scrub Jay and the",
+    "photo_url": "http://farm1.staticflickr.com/27/62271214_52faae0d55_b.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Turkey Vulture",
+    "description": "The Turkey Vulture (Cathartes aura), also known in some North American regions as the turkey buzzard (or just buzzard), and in some areas of the Caribbean as the John crow or carrion crow, is the most widespread of the New World vultures. One of three species in the genus Cathartes, in the family Cathartidae, the Turkey Vulture ranges from southern Canada to the southernmost tip of South America. It inhabits a variety of open and semi-open...",
+    "photo_url": "http://farm4.staticflickr.com/3235/3070052982_fc77b55b1c_b.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Pigeon",
+    "description": "The Rock Dove (Columba livia) or Rock Pigeon is a member of the bird family Columbidae (doves and pigeons). In common usage, this bird is often simply referred to as the pigeon",
+    "photo_url": "http://farm3.staticflickr.com/2107/2175759757_cdefb312bd_o.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "House Finch",
+    "description": "The House Finch (Haemorhous mexicanus) is a bird in the finch family Fringillidae, which is found in North America. This species and the other 'American rosefinches' are placed in the genus Haemorhous by the American Ornithologists' Union but have usually been included in Carpodacus.",
+    "photo_url": "http://farm4.staticflickr.com/3104/3118512037_32a447c8e4_b.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Common Raven",
+    "description": "The Common Raven (Corvus corax), also known as the Northern Raven, is a large, all-black passerine bird. Found across the Northern Hemisphere, it is the most widely distributed of all corvids. There are at least eight subspecies with little variation in appearance—although recent research has demonstrated significant genetic differences among populations from various regions. It is one of the two largest corvids, alongside the Thick-billed Raven, and is possibly the heaviest passerine bird; at maturity, the...",
+    "photo_url": "http://farm3.staticflickr.com/2039/2056438076_a7cb1f73ea_o.jpg",
+		"commonality": 100
+  },
+  {
+    "name": "Townsend's Warbler",
+    "description": "Townsend's Warbler (Setophaga townsendi) is a small songbird of the New World warbler family.",
+    "photo_url": "http://farm3.staticflickr.com/2148/2275869327_b92df977d2.jpg",
+		"commonality": 100
   }
 ]
