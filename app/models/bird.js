@@ -4,7 +4,9 @@ var mongoose = require('mongoose'),
 var BirdSchema = new Schema({
   name: String,
   photo_url: String,
-  description: String
+  description: String,
+  commonality: Number,
+  fun_fact: String
 });
 
 BirdSchema.virtual('date')

@@ -6,7 +6,9 @@ block content
 
   ul
     each bird in birds
-      li
-        div= bird.name
-        div= bird.description
-        img(src=bird.photo_url)
+      if bird.fun_fact
+        li.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}")
+          img(src=bird.photo_url)
+      else
+        li.bird(data-commonality="#{bird.commonality}")
+          img(src=bird.photo_url)
