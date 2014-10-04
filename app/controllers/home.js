@@ -1,7 +1,7 @@
 var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+  Bird = mongoose.model('Bird');
 
 module.exports = function (app) {
   app.use('/', router);
@@ -9,11 +9,11 @@ module.exports = function (app) {
 
 router.get('/', function (req, res, next) {
 
-  Article.find(function (err, articles) {
+  Bird.find(function (err, birds) {
     if (err) return next(err);
     res.render('index', {
       title: 'Pocket Doug',
-      articles: articles
+      articles: birds
     });
   });
 });
