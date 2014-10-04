@@ -4,11 +4,12 @@ block content
   h1= title
   p Welcome to #{title}
 
-  ul
-    each bird in birds
-      if bird.fun_fact
-        li.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}")
-          img(src=bird.photo_url)
-      else
-        li.bird(data-commonality="#{bird.commonality}")
-          img(src=bird.photo_url)
+  #container
+    #items
+      each bird in birds
+        if bird.fun_fact
+          div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}")
+            img(src=bird.photo_url)
+        else
+          div.bird(data-commonality="#{bird.commonality}")
+            img(src=bird.photo_url)
