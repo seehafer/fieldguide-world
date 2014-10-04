@@ -1,13 +1,12 @@
 extends layout
 
 block content
-  .container
-    .h1 Birds of the San Francisco Bay Area
-    #items
-      each bird in birds
-        if bird.fun_fact
-          div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}")
-            img(src=bird.photo_url)
-        else
-          div.bird(data-commonality="#{bird.commonality}")
-            img(src=bird.photo_url)
+  .h1 Birds of the San Francisco Bay Area
+  #items
+    each bird in birds
+      if bird.fun_fact
+        div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}")
+          img(src=bird.photo_url)
+      else
+        div.bird(data-commonality="#{bird.commonality}")
+          img(src=bird.photo_url)
