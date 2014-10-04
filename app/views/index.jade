@@ -3,11 +3,21 @@ extends layout
 block content
   .container
     .h1 Birds of the San Francisco Bay Area
-    #items
+    #filters.col-md-1
+      div Filters
+      div Size
+      #size-filter.btn-group-vertical
+        button.btn.btn-default.active(data-filter='*') show all
+        button.btn.btn-default(data-filter='[data-size=small]') small
+        button.btn.btn-default(data-filter='[data-size=medium]') medium
+        button.btn.btn-default(data-filter='[data-size=large]') large
+      div Color
+      #size-filter.btn-group-vertical
+        button.btn.btn-default.active(data-filter='*') show all
+        button.btn.btn-default(data-filter='[data-size=small]') small
+        button.btn.btn-default(data-filter='[data-size=medium]') medium
+        button.btn.btn-default(data-filter='[data-size=large]') large
+    #items.col-md-11
       each bird in birds
-        if bird.fun_fact
-          div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}")
-            img(src=bird.photo_url)
-        else
-          div.bird(data-commonality="#{bird.commonality}")
-            img(src=bird.photo_url)
+        div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}")
+          img(src=bird.photo_url)

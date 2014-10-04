@@ -15,7 +15,7 @@
     "photo_url": "http://farm4.staticflickr.com/3110/2470003522_fd19109aec_b.jpg",
 		"commonality": 100,
     "color": ["black"],
-    "size": "medium"
+    "size": "large"
   },
   {
     "name": "American White Pelican",
@@ -34,15 +34,6 @@
 		"commonality": 100,
     "color": ["orange"],
     "size": "small"
-  },
-  {
-    "name": "Common Raven",
-    "description": "The Common Raven (Corvus corax), also known as the Northern Raven, is a large, all-black passerine bird. Found across the Northern Hemisphere, it is the most widely distributed of all corvids. There are at least eight subspecies with little variation in appearance—although recent research has demonstrated significant genetic differences among populations from various regions. It is one of the two largest corvids, alongside the Thick-billed Raven, and is possibly the heaviest passerine bird; at maturity, the...",
-    "fun_fact": " ",
-    "photo_url": "http://farm3.staticflickr.com/2039/2056438076_a7cb1f73ea_o.jpg",
-		"commonality": 100,
-    "color": ["black"],
-    "size": "large"
   },
   {
     "name": "American Coot",
