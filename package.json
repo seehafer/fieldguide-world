@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bower install && grunt bower_concat"
   },
   "dependencies": {
     "body-parser": "~1.4.3",
@@ -11,14 +12,15 @@
     "cookie-parser": "~1.3.2",
     "express": "~4.2.0",
     "glob": "~4.0.5",
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "^0.3.0",
     "jade": "~1.3.0",
     "method-override": "~2.1.1",
     "mongodb": "~1.4.18",
     "mongoose": "~3.8.12",
     "morgan": "~1.1.1",
     "serve-favicon": "~2.0.1",
-    "underscore": "^1.7.0",
-    "jade": "~1.3.0"
+    "underscore": "^1.7.0"
   },
   "devDependencies": {
     "bower": "^1.3.12",
