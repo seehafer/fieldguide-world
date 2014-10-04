@@ -11,9 +11,13 @@ router.get('/', function (req, res, next) {
 
   Bird.find(function (err, birds) {
     if (err) return next(err);
-    res.render('index', {
-      title: 'Pocket Doug',
-      birds: birds
+    
+    Bird.colors(function (err, colors) {
+      res.render('index', {
+        title: 'Pocket Doug',
+        birds: birds,
+        colors: colors
+      });
     });
   });
 });

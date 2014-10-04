@@ -1,23 +1,21 @@
 extends layout
 
 block content
-  .container
-    .h1 Birds of the San Francisco Bay Area
-    #filters.col-md-1
-      div Filters
-      div Size
-      #size-filter.btn-group-vertical
-        button.btn.btn-default.active(data-filter='*') show all
-        button.btn.btn-default(data-filter='[data-size=small]') small
-        button.btn.btn-default(data-filter='[data-size=medium]') medium
-        button.btn.btn-default(data-filter='[data-size=large]') large
-      div Color
-      #size-filter.btn-group-vertical
-        button.btn.btn-default.active(data-filter='*') show all
-        button.btn.btn-default(data-filter='[data-size=small]') small
-        button.btn.btn-default(data-filter='[data-size=medium]') medium
-        button.btn.btn-default(data-filter='[data-size=large]') large
-    #items.col-md-11
-      each bird in birds
-        div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}")
-          img(src=bird.photo_url)
+  .h1 Birds of the San Francisco Bay Area
+  #filters.col-md-1
+    div Filters
+    div Size
+    #size-filter.btn-group-vertical
+      button.btn.btn-default.active(data-filter='*') show all
+      button.btn.btn-default(data-filter='[data-size=small]') small
+      button.btn.btn-default(data-filter='[data-size=medium]') medium
+      button.btn.btn-default(data-filter='[data-size=large]') large
+    div Color
+    #color-filter.btn-group-vertical
+      button.btn.btn-default.active(data-filter='*') show all
+      each color in colors
+        button.btn.btn-default(data-filter='[data-color*=#{color}]') #{color}
+  #items.col-md-11
+    each bird in birds
+      div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}")
+        img(src=bird.photo_url)
