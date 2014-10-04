@@ -21,6 +21,7 @@
     "mongoose": "~3.8.12",
     "morgan": "~1.1.1",
     "serve-favicon": "~2.0.1",
+    "request": "~2.36.0",
     "underscore": "^1.7.0"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-develop": "~0.4.0",
     "load-grunt-tasks": "~0.6.0",
-    "request": "~2.36.0",
     "time-grunt": "~0.3.2"
   }
 }
