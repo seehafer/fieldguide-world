@@ -6,7 +6,9 @@ var BirdSchema = new Schema({
   photo_url: String,
   description: String,
   commonality: Number,
-  fun_fact: String
+  fun_fact: String,
+  color: Array,
+  size: String
 });
 
 BirdSchema.virtual('date')
