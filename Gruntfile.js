@@ -36,6 +36,45 @@ module.exports = function (grunt) {
           'app/views/**/*.jade'
         ],
         options: { livereload: reloadPort }
+      },
+      public_js: {
+        files: ['public/js/**'],
+        tasks: ['develop', 'delayed-livereload']
+      },
+      bower: {
+        files: ['bower.json'],
+        tasks: ['bower-install', 'bower_concat', 'delayed-livereload']
+      }
+    },
+    "bower-install-simple": {
+        options: {
+            color: true,
+            directory: "public/components"
+        },
+    },
+    // bower: {
+    //   target: {
+    //     rjsConfig: 'public/js/require.config.js',
+    //     options: {
+    //       transitive: true
+    //     }
+    //   }
+    // },
+    bower_concat: {
+      all: {
+        dest: 'public/js/_bower.js',
+        // exclude: [
+        //     'jquery',
+        //     'modernizr'
+        // ],
+        // dependencies: {
+        //   'underscore': 'jquery',
+        //   'backbone': 'underscore',
+        //   'jquery-mousewheel': 'jquery'
+        // },
+        // bowerOptions: {
+        //   relative: false
+        // }
       }
     }
   });
@@ -43,6 +82,9 @@ module.exports = function (grunt) {
   grunt.config.requires('watch.js.files');
   files = grunt.config('watch.js.files');
   files = grunt.file.expand(files);
+
+  grunt.loadNpmTasks('grunt-bower-concat');
+  grunt.registerTask("bower-install", [ "bower-install-simple" ]);
 
   grunt.registerTask('delayed-livereload', 'Live reload after the node server has restarted.', function () {
     var done = this.async();
