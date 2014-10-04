@@ -20,8 +20,13 @@ router.get('/', function (req, res, next) {
 
 router.get('/add/', function (req, res, next) {
   Bird.colors(function (err, colors) {
-    res.render('add', {
-      colors: colors
+    if (err) return next(err);
+    Bird.sizes(function (err, sizes) {
+      if (err) return next(err);
+      res.render('add', {
+        colors: colors,
+        sizes: sizes
+      });
     });
   });
 });

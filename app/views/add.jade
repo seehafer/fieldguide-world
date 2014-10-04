@@ -19,9 +19,19 @@ block content
           input.form-control(type='text', name='photo_url', placeholder='http://...')
 
         .form-group
-          label Color:
-          select.form-control
-            for color in colors
+          label Commonality (0-100):
+          input.form-control(type='text', name='commonality', placeholder='0')
+
+        .form-group
+          label Colors (Cmd-click to select multiple):
+          select.form-control(multiple="true", name="color")
+            each color in colors
               option= color
+
+        .form-group
+          label Size
+          select.form-control(name="size")
+            each size in sizes
+              option= size
 
         button.btn.btn-default(type="submit") Submit
