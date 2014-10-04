@@ -1,4 +1,5 @@
 var mongoose = require('mongoose'),
+  _ = require('underscore')._,
   Schema = mongoose.Schema;
 
 var BirdSchema = new Schema({
@@ -16,5 +17,16 @@ BirdSchema.virtual('date')
     return this._id.getTimestamp();
   });
 
-mongoose.model('Bird', BirdSchema);
+BirdSchema.statics.colors = function (cb) {
+  this.find({}, {'color': 1, '_id': 0}, function (err, birds) {
+    if (err) {
+      cb(err);
+    } else {
+      console.log(birds);
+      var colors = _(birds).chain().pluck('color').flatten().uniq().value();
+      cb(null, colors);
+    }
+  });
+}
 
+mongoose.model('Bird', BirdSchema);
