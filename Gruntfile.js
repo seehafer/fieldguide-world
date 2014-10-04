@@ -59,4 +59,39 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', ['develop', 'watch']);
+
+  var MongoClient = require('mongodb').MongoClient,
+    fs = require('fs');
+
+  grunt.registerTask('fixture', 'Load data from fixture file', function (name, reset) {
+    var done = this.async();
+    reset = reset === "reset";
+    console.log('Connecting...');
+    MongoClient.connect('mongodb://127.0.0.1:27017/pocketdoug-development', function (err, db) {
+      var collection = db.collection(name);
+      var data_str = fs.readFileSync('fixtures/' + name + '.json', {
+        encoding: 'utf-8'
+      });
+      var data = JSON.parse(data_str);
+      var insert = function () {
+        console.log('Inserting ' + data.length + ' objects...');
+        collection.insert(data, {w: 1}, function (err, objects) {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log("Inserted " + objects.length + " objects.");
+          }
+          done();
+        });
+      }
+
+      if (reset) {
+        console.log()
+        collection.drop(insert);
+      } else {
+        insert();
+      }
+
+    })
+  });
 };
