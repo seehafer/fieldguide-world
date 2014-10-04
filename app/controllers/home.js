@@ -17,3 +17,9 @@ router.get('/', function (req, res, next) {
     });
   });
 });
+
+router.get('/bird/', function (req, res, next) {
+  Bird.find(function (err, birds) {
+    res.json(birds);
+  })
+});

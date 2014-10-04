@@ -67,11 +67,11 @@ module.exports = function (grunt) {
         //     'jquery',
         //     'modernizr'
         // ],
-        // dependencies: {
-        //   'underscore': 'jquery',
-        //   'backbone': 'underscore',
-        //   'jquery-mousewheel': 'jquery'
-        // },
+        dependencies: {
+          'underscore': 'jquery',
+          'backbone': 'underscore',
+          'isotope': 'jquery'
+        },
         // bowerOptions: {
         //   relative: false
         // }
