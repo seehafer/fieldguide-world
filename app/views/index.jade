@@ -3,3 +3,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  ul
+    each bird in birds
+      li
+        div= bird.name
+        div= bird.description
+        img(src=bird.photo_url)
