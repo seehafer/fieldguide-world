@@ -104,13 +104,14 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['develop', 'watch']);
 
   var MongoClient = require('mongodb').MongoClient,
-    fs = require('fs');
+    fs = require('fs'),
+    config = require('./config/config');
 
   grunt.registerTask('fixture', 'Load data from fixture file', function (name, reset) {
     var done = this.async();
     reset = reset === "reset";
     console.log('Connecting...');
-    MongoClient.connect('mongodb://127.0.0.1:27017/pocketdoug-development', function (err, db) {
+    MongoClient.connect(config.db, function (err, db) {
       var collection = db.collection(name);
       var data_str = fs.readFileSync('fixtures/' + name + '.json', {
         encoding: 'utf-8'
