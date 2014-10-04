@@ -70,7 +70,8 @@ module.exports = function (grunt) {
         dependencies: {
           'underscore': 'jquery',
           'backbone': 'underscore',
-          'isotope': 'jquery'
+          'isotope': 'jquery',
+          'bootstrap': 'jquery'
         },
         // bowerOptions: {
         //   relative: false
