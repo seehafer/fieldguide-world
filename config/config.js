@@ -28,7 +28,7 @@ var config = {
     app: {
       name: 'pocketdoug'
     },
-    port: 80,
+    port: process.env.PORT,
     db: process.env.MONGOLAB_URI
   }
 };
