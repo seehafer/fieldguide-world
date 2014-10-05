@@ -10,7 +10,7 @@ var config = {
     },
     port: 3000,
     db: 'mongodb://localhost/pocketdoug-development'
-    
+
   },
 
   test: {
@@ -20,7 +20,7 @@ var config = {
     },
     port: 3000,
     db: 'mongodb://localhost/pocketdoug-test'
-    
+
   },
 
   production: {
@@ -28,9 +28,8 @@ var config = {
     app: {
       name: 'pocketdoug'
     },
-    port: 3000,
-    db: 'mongodb://localhost/pocketdoug-production'
-    
+    port: process.env.PORT,
+    db: process.env.MONGOLAB_URI
   }
 };
 
