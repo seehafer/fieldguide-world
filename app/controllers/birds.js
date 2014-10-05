@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
     if (err) return next(err);
 
     Bird.colors(function (err, colors) {
-      res.render('index', {
+      res.render('birds', {
         title: 'Pocket Doug',
         birds: birds,
         colors: colors
@@ -30,7 +30,7 @@ var renderForm = function (req, res, next, data) {
     Bird.sizes(function (err, sizes) {
       if (err) return next(err);
       data.bird = data.bird || new Bird();
-      res.render('form', _.extend({
+      res.render('forms/bird', _.extend({
         colors: colors,
         sizes: sizes
       }, data));

@@ -1,0 +1,78 @@
+extends layout
+
+block content
+  h2.col-xs-12.col-sm-offset-2.col-sm-10.col-md-offset-1.col-md-11.title Birds of San Francisco
+  .clearfix
+  #dropdown-filters.col-xs-12
+    #dropdown-size-filter.btn-group
+      <button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown'>Size &nbsp;<span class="caret"></span></button>
+      ul.dropdown-menu(role=menu)
+        li
+          a.droplink(href="javascript:void(0)", data-filter='*') show all
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-size=small]') small
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-size=medium]') medium
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-size=large]') large
+    #dropdown-color-filter.btn-group
+      <button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown'>Color &nbsp;<span class="caret"></span></button>
+      ul.dropdown-menu(role=menu)
+        li
+          a.droplink(href="javascript:void(0)", data-filter='*') show all
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=red]') red
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=orange]') orange
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=yellow]') yellow
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=green]') green
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=blue]') blue
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=purple]') purple
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=black]') black
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=grey]') grey
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=brown]') brown
+        li
+          a.droplink(href="javascript:void(0)", data-filter='[data-color*=white]') white
+  p.clearfix
+  #filters.col-sm-2.col-md-1
+    p.clearfix
+    #size-filter.btn-group-vertical
+      button.btn.verticalbtn.btn-default.active(data-filter='*') show all
+      button.btn.verticalbtn.btn-default(data-filter='[data-size=small]') small
+      button.btn.verticalbtn.btn-default(data-filter='[data-size=medium]') medium
+      button.btn.verticalbtn.btn-default(data-filter='[data-size=large]') large
+    p.clearfix
+    #color-filter.btn-group-vertical
+      button.btn.verticalbtn.btn-default.active(data-filter='*') show all
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=red]') red
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=orange]') orange
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=yellow]') yellow
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=green]') green
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=blue]') blue
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=purple]') purple
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=black]') black
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=grey]') grey
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=brown]') brown
+      button.btn.verticalbtn.btn-default(data-filter='[data-color*=white]') white
+  #items.col-xs-12.col-sm-10.col-sm-offset-2.col-md-11.col-md-offset-1
+    each bird in birds
+      div.photo.bird(data-commonality=bird.commonality, data-fun-fact=bird.fun_fact, data-size=bird.size, data-color=bird.color)
+        a.photo_link(
+          href="javaScript:void(0);"
+          title="Fun Fact"
+          tabindex=100
+          data-toggle="popover"
+          data-trigger="focus"
+          data-content!="<p>#{bird.fun_fact}</p><a href='/edit/#{bird.id}/' class='pull-right'>Edit</a>"
+          data-placement="top"
+        )
+          img(src=bird.photo_url, alt="#{bird.name}")
+
+

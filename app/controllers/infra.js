@@ -23,7 +23,7 @@ var renderForm = function (req, res, next, data) {
   Infra.sizes(function (err, sizes) {
     if (err) return next(err);
     data.infra = data.infra || new Infra();
-    res.render('form', _.extend({
+    res.render('forms/infra', _.extend({
       sizes: sizes
     }, data));
   });
