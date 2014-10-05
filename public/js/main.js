@@ -45,6 +45,8 @@ $(window).load( function() {
     });
   });
   
+  $('img').capty();
+  
 
   var Bird = Backbone.Model.extend();
   Bird.Collection = Backbone.Collection.extend({
