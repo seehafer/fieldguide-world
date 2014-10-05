@@ -18,7 +18,7 @@ $(window).load( function() {
     $container.isotope({ filter: filterValue });
   }); */
 
-  $('.container').on( 'click', 'button', function() {
+  $('body').on( 'click', 'button', function() {
     var $this = $(this);
     // get group key
     var $buttonGroup = $this.parents('.btn-group-vertical');
