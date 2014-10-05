@@ -9,14 +9,25 @@
   max-height: 300px;
 }
 
+#dropdown-filters {
+  display:none;
+}
 
-@media (max-width: 991px) { 
+@media (min-width: 768px) and (max-width: 991px) { 
   .bird img {
     width: 250px;
     max-height: 250px;
   }
 }
 
+@media (max-width: 768px) { 
+  #dropdown-filters {
+    display:block;
+  }
+  #filters {
+    display:none;
+  }
+}
 
 
 .bird > * {
@@ -45,10 +56,21 @@ ul {
   width:800px;
 }
 
+@media (max-width: 768px) { 
+  .title {
+    margin-bottom: 20px;
+  }
+}
+
+
 .bird_link {
   display:inline-block;
 }
 
 #filters {
   position: fixed;
+}
+
+#dropdown-color-filter {
+  margin-left:50px;
 }
