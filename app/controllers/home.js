@@ -2,6 +2,7 @@ var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
   Bird = mongoose.model('Bird'),
+  Infra = mongoose.model('Infra'),
   _ = require('underscore')._;
 
 module.exports = function (app) {

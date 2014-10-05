@@ -20,10 +20,6 @@ ul {
   padding-left: 0;
 }
 
-li {
-
-}
-
 .items:after {
   content: '';
   display: block;
@@ -41,4 +37,8 @@ li {
 
 .bird_link {
   display:inline-block;
+}
+
+#filters {
+  position: fixed;
 }
