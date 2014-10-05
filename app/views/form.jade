@@ -7,20 +7,20 @@ block content
       form(method="POST")
         .form-group
           label Name:
-          input.form-control(type='text', name='name', placeholder='Crow' value="#{bird.name}")
+          input.form-control(type='text', name='name', placeholder='Crow' value=bird.name)
         .form-group
           label Description:
-          input.form-control(type='text', name='description', placeholder='Something interesting...', value="#{bird.description}")
+          input.form-control(type='text', name='description', placeholder='Something interesting...', value=bird.description)
         .form-group
           label Fun Fact:
-          input.form-control(type='text', name='fun_fact', placeholder='Did you know this bird is actually a dinosaur???', value="#{bird.fun_fact}")
+          input.form-control(type='text', name='fun_fact', placeholder='Did you know this bird is actually a dinosaur???', value=bird.fun_fact)
         .form-group
           label Photo url:
-          input.form-control(type='text', name='photo_url', placeholder='http://...', value="#{bird.photo_url}")
+          input.form-control(type='text', name='photo_url', placeholder='http://...', value=bird.photo_url)
 
         .form-group
           label Commonality (0-100):
-          input.form-control(type='text', name='commonality', placeholder='0', value="#{bird.commonality}")
+          input.form-control(type='text', name='commonality', placeholder='0', value=bird.commonality)
 
         .form-group
           label Colors (Cmd-click to select multiple):
