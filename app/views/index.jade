@@ -13,8 +13,16 @@ block content
     p.clearfix
     #color-filter.btn-group-vertical
       button.btn.btn-default.active(data-filter='*') show all
-      each color in colors
-        button.btn.btn-default(data-filter='[data-color*=#{color}]') #{color}
+      button.btn.btn-default(data-filter='[data-color*=red]') red
+      button.btn.btn-default(data-filter='[data-color*=orange]') orange
+      button.btn.btn-default(data-filter='[data-color*=yellow]') yellow
+      button.btn.btn-default(data-filter='[data-color*=green]') green
+      button.btn.btn-default(data-filter='[data-color*=blue]') blue
+      button.btn.btn-default(data-filter='[data-color*=purple]') purple
+      button.btn.btn-default(data-filter='[data-color*=black]') black
+      button.btn.btn-default(data-filter='[data-color*=grey]') grey
+      button.btn.btn-default(data-filter='[data-color*=brown]') brown
+      button.btn.btn-default(data-filter='[data-color*=white]') white
   #items.col-md-11.col-md-offset-1
     each bird in birds
       div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}")
