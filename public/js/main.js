@@ -5,19 +5,19 @@ $(window).load( function() {
     itemSelector: '.bird',
     layoutMode: 'masonry',
   });
-  
+
   var filters = {};
-  
+
  /* $('#size-filter').on( 'click', 'button', function() {
     var filterValue = $( this ).attr('data-filter');
     $container.isotope({ filter: filterValue });
   });
-  
+
   $('#color-filter').on( 'click', 'button', function() {
     var filterValue = $( this ).attr('data-filter');
     $container.isotope({ filter: filterValue });
   }); */
-  
+
   $('.container').on( 'click', 'button', function() {
     var $this = $(this);
     // get group key
@@ -34,8 +34,8 @@ $(window).load( function() {
     if (filterValue == "**") filterValue = "*";
     $container.isotope({ filter: filterValue });
   });
-  
-  
+
+
   // change active class on buttons
   $('.btn-group-vertical').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );
@@ -44,17 +44,21 @@ $(window).load( function() {
       $( this ).addClass('active');
     });
   });
-  
+
   $('img').capty();
-  
 
-  var Bird = Backbone.Model.extend();
-  Bird.Collection = Backbone.Collection.extend({
-    model: Bird,
-    url: '/bird/'
-  });
+  $('body').on('click', 'div.bird', function (e) {
+    window.location.href = '/edit/' + $(e.currentTarget).data('id') + '/';
+  })
 
-  var birds = new Bird.Collection();
-  birds.fetch();
+
+  // var Bird = Backbone.Model.extend();
+  // Bird.Collection = Backbone.Collection.extend({
+  //   model: Bird,
+  //   url: '/bird/'
+  // });
+
+  // var birds = new Bird.Collection();
+  // birds.fetch();
 
 });

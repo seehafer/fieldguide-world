@@ -17,5 +17,5 @@ block content
         button.btn.btn-default(data-filter='[data-color*=#{color}]') #{color}
   #items.col-md-11
     each bird in birds
-      div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}")
+      div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}", data-id="#{bird._id}")
         img(src=bird.photo_url, alt="#{bird.name}")
