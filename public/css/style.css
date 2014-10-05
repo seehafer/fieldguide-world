@@ -59,6 +59,16 @@ ul {
   .title {
     margin-bottom: 20px;
   }
+  #dropdown-filters {
+    padding-left: 5px;
+  }
+  #items {
+    padding-left: 5px;
+  }
+  #title {
+    padding-left: 5px;
+  }
+  
 }
 
 
