@@ -30,6 +30,7 @@ var renderForm = function (req, res, next, data) {
     if (err) return next(err);
     Bird.sizes(function (err, sizes) {
       if (err) return next(err);
+      data.bird = data.bird || new Bird();
       res.render('form', _.extend({
         colors: colors,
         sizes: sizes
