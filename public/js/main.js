@@ -3,6 +3,9 @@ $(window).load( function() {
   var $container = $('#items').isotope({
     itemSelector: '.photo',
     layoutMode: 'masonry',
+    getSortData: {commonality: '[data-commonality] parseInt'},
+    sortBy: 'commonality',
+    sortAscending: false
   });
 
   var filters = {};
