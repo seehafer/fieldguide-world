@@ -15,4 +15,11 @@ InfraSchema.virtual('date')
     return this._id.getTimestamp();
   });
 
+InfraSchema.statics.types = [
+  {id: 'plumbing', name: 'Plumbing and Waterworks'},
+  {id: 'food', name: 'Food'},
+  {id: 'roadways', name: 'Roadways'},
+  {id: 'power', name: 'Power Grid'},
+]
+
 mongoose.model('Infra', InfraSchema);

@@ -20,13 +20,10 @@ router.get('/', function (req, res, next) {
 
 var renderForm = function (req, res, next, data) {
   data = data || {};
-  Infra.sizes(function (err, sizes) {
-    if (err) return next(err);
-    data.infra = data.infra || new Infra();
-    res.render('forms/infra', _.extend({
-      sizes: sizes
-    }, data));
-  });
+  data.item = data.item || new Infra();
+  res.render('forms/infra', _.extend({
+    types: Infra.types
+  }, data));
 }
 
 router.get('/add/', function (req, res, next) {
@@ -41,7 +38,7 @@ router.post('/add/', function (req, res, next) {
 
 router.get('/edit/:id/', function (req, res, next) {
   Infra.findById(req.params.id, function (err, infra) {
-    renderForm(req, res, next, {infra: infra});
+    renderForm(req, res, next, {item: infra});
   })
 });
 
