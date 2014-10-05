@@ -48,11 +48,6 @@ $(window).load( function() {
 
   $('.bird_link').popover({container: 'body'}); // fun-facts
 
-  $('body').on('click', 'div.bird', function (e) {
-    window.location.href = '/edit/' + $(e.currentTarget).data('id') + '/';
-  })
-
-
   // var Bird = Backbone.Model.extend();
   // Bird.Collection = Backbone.Collection.extend({
   //   model: Bird,
