@@ -13,7 +13,8 @@ router.get('/', function (req, res, next) {
     if (err) return next(err);
     res.render('infra', {
       title: 'Pocket Doug',
-      infras: infras
+      infras: infras,
+      types: Infra.types
     });
   });
 });

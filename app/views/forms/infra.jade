@@ -23,8 +23,8 @@ block content
           select.form-control(name="type")
             each type in types
               if (item.type === type.id)
-                option(selected)= type.name
+                option(value=type.id, selected)= type.name
               else
-                option= type.name
+                option(value=type.id)= type.name
 
         button.btn.btn-default(type="submit") Submit

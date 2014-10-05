@@ -20,6 +20,7 @@ InfraSchema.statics.types = [
   {id: 'food', name: 'Food'},
   {id: 'roadways', name: 'Roadways'},
   {id: 'power', name: 'Power Grid'},
+  {id: 'telephony', name: 'Telephony'}
 ]
 
 mongoose.model('Infra', InfraSchema);
