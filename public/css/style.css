@@ -35,6 +35,10 @@ ul {
   width:800px;
 }
 
+.bird_link {
+  display:inline-block;
+}
+
 #filters {
   position: fixed;
 }
