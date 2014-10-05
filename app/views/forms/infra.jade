@@ -1,43 +1,30 @@
-extends layout
+extends ../layout
 
 block content
   .row
     .col-md-6.col-md-offset-3
-      h1 Add a bird!
+      h1 Add a piece of infrastructure!
       form(method="POST")
         .form-group
           label Name:
-          input.form-control(type='text', name='name', placeholder='Crow' value=bird.name)
+          input.form-control(type='text', name='name', placeholder='Telephone Pole' value=item.name)
         .form-group
           label Description:
-          input.form-control(type='text', name='description', placeholder='Something interesting...', value=bird.description)
+          input.form-control(type='text', name='description', placeholder='Something interesting...', value=item.description)
         .form-group
           label Fun Fact:
-          input.form-control(type='text', name='fun_fact', placeholder='Did you know this bird is actually a dinosaur???', value=bird.fun_fact)
+          input.form-control(type='text', name='fun_fact', placeholder='', value=item.fun_fact)
         .form-group
           label Photo url:
-          input.form-control(type='text', name='photo_url', placeholder='http://...', value=bird.photo_url)
+          input.form-control(type='text', name='photo_url', placeholder='http://...', value=item.photo_url)
 
         .form-group
-          label Commonality (0-100):
-          input.form-control(type='text', name='commonality', placeholder='0', value=bird.commonality)
-
-        .form-group
-          label Colors (Cmd-click to select multiple):
-          select.form-control(multiple="true", name="color")
-            each color in colors
-              if (bird.color.indexOf(color) > -1)
-                option(selected)= color
+          label Type
+          select.form-control(name="type")
+            each type in types
+              if (item.type === type.id)
+                option(selected)= type.name
               else
-                option= color
-
-        .form-group
-          label Size
-          select.form-control(name="size")
-            each size in sizes
-              if (bird.size === size)
-                option(selected)= size
-              else
-                option= size
+                option= type.name
 
         button.btn.btn-default(type="submit") Submit

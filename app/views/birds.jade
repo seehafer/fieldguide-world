@@ -70,7 +70,7 @@ block content
           tabindex=100
           data-toggle="popover"
           data-trigger="focus"
-          data-content!="<p>#{bird.fun_fact}</p><a href='/edit/#{bird.id}/' class='pull-right'>Edit</a>"
+          data-content!="<p>#{bird.fun_fact}</p><a href='/birds/edit/#{bird.id}/' class='pull-right'>Edit</a>"
           data-placement="top"
         )
           img(src=bird.photo_url, alt="#{bird.name}")
