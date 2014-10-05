@@ -18,4 +18,6 @@ block content
   #items.col-md-11
     each bird in birds
       div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}")
-        img(src=bird.photo_url, alt="#{bird.name}")
+        a.bird_link(href="javaScript:void(0);", title="Fun Fact", tabindex=100, data-toggle="popover", data-trigger="focus", data-content="#{bird.fun_fact}", data-placement="top")
+          img(src=bird.photo_url, alt="#{bird.name}")
+  

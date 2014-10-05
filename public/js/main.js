@@ -47,6 +47,8 @@ $(window).load( function() {
   
   $('img').capty({ animation: 'fade', speed: 100});
   
+  $('.bird_link').popover({container: 'body'}); // fun-facts
+  
 
   var Bird = Backbone.Model.extend();
   Bird.Collection = Backbone.Collection.extend({
