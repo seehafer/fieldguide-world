@@ -17,7 +17,7 @@ $(window).load( function() {
     $container.isotope({ filter: filterValue });
   }); */
 
-  $('body').on( 'click', 'button', function() {
+  $('body').on( 'click', 'button.verticalbtn', function() {
     var $this = $(this);
     // get group key
     var $buttonGroup = $this.parents('.btn-group-vertical');
@@ -33,6 +33,24 @@ $(window).load( function() {
     if (filterValue == "**") filterValue = "*";
     $container.isotope({ filter: filterValue });
   });
+  
+  $('body').on( 'click', 'a.droplink', function() {
+    var $this = $(this);
+    // get group key
+    var $buttonGroup = $this.parents('.btn-group');
+    var filterGroup = $buttonGroup.attr('id');
+    // set filter for group
+    filters[ filterGroup ] = $this.attr('data-filter');
+    // combine filters
+    var filterValue = '';
+    for ( var prop in filters ) {
+      filterValue += filters[ prop ];
+    }
+    // set filter for Isotope
+    if (filterValue == "**") filterValue = "*";
+    $container.isotope({ filter: filterValue });
+  });
+  
 
 
   // change active class on buttons
