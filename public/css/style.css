@@ -1,12 +1,11 @@
 .bird {
   position: relative;
   float: left;
-  margin: 5px;
-  padding: 10px;
+  padding: 3px;
 }
 
 .bird img {
-  max-width: 300px;
+  width: 300px;
   max-height: 300px;
 }
 
@@ -29,4 +28,13 @@ li {
   content: '';
   display: block;
   clear: both;
+}
+
+.heading {
+  margin-top:30px;
+}
+
+.title {
+  margin-bottom:50px;
+  width:800px;
 }

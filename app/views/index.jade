@@ -1,16 +1,16 @@
 extends layout
 
 block content
-  .h1 Birds of the San Francisco Bay Area
+  h1.title.center-block Birds of the San Francisco Bay Area
   #filters.col-md-1
-    div Filters
-    div Size
+    h4 Filters
+    h5.heading Size
     #size-filter.btn-group-vertical
       button.btn.btn-default.active(data-filter='*') show all
       button.btn.btn-default(data-filter='[data-size=small]') small
       button.btn.btn-default(data-filter='[data-size=medium]') medium
       button.btn.btn-default(data-filter='[data-size=large]') large
-    div Color
+    h5.heading Color
     #color-filter.btn-group-vertical
       button.btn.btn-default.active(data-filter='*') show all
       each color in colors

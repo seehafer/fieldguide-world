@@ -27,13 +27,11 @@ $(window).load( function() {
     filters[ filterGroup ] = $this.attr('data-filter');
     // combine filters
     var filterValue = '';
-    var i = 0;
     for ( var prop in filters ) {
-      if (i > 0 && i != filters.length-1) filterValue += ",";
       filterValue += filters[ prop ];
-      i++;
     }
     // set filter for Isotope
+    if (filterValue == "**") filterValue = "*";
     $container.isotope({ filter: filterValue });
   });
   
