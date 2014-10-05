@@ -45,7 +45,7 @@ $(window).load( function() {
     });
   });
 
-  $('img').capty();
+  $('img').capty({ animation: 'fade', speed: 100});
 
   $('body').on('click', 'div.bird', function (e) {
     window.location.href = '/edit/' + $(e.currentTarget).data('id') + '/';
