@@ -5,13 +5,13 @@ block content
   .clearfix
   #filters.col-xs-3.col-sm-2.col-md-2
     p.clearfix
-    #size-filter.btn-group-vertical
+    #type-filter.btn-group-vertical
       button.btn.verticalbtn.btn-default.active(data-filter='*') show all
       each type in types
         button.btn.verticalbtn.btn-default(data-filter='[data-type=#{type.id}]')= type.name
   #items.col-xs-9.col-xs-offset-3.col-sm-10.col-sm-offset-2.col-md-10.col-md-offset-2
     each item in infras
-      div.photo.infra
+      div.photo.infra(data-type=item.type)
         a.photo_link(
           href="javaScript:void(0);"
           title="Fun Fact"
@@ -20,7 +20,6 @@ block content
           data-trigger="focus"
           data-content!="<p>#{item.fun_fact}</p><a href='edit/#{item.id}/' class='pull-right'>Edit</a>"
           data-placement="top"
-          data-type=item.type
         )
           img(src=item.photo_url, alt="#{item.name}")
 
