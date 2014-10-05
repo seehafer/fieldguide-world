@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1.title.center-block Birds of the San Francisco Bay Area
-  #filters.col-md-1
+  #filters
     h4 Filters
     h5.heading Size
     #size-filter.btn-group-vertical
@@ -15,7 +15,7 @@ block content
       button.btn.btn-default.active(data-filter='*') show all
       each color in colors
         button.btn.btn-default(data-filter='[data-color*=#{color}]') #{color}
-  #items.col-md-11
+  #items.col-md-11.col-md-offset-1
     each bird in birds
       div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}", data-id="#{bird._id}")
         img(src=bird.photo_url, alt="#{bird.name}")

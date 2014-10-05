@@ -20,10 +20,6 @@ ul {
   padding-left: 0;
 }
 
-li {
-
-}
-
 .items:after {
   content: '';
   display: block;
@@ -37,4 +33,8 @@ li {
 .title {
   margin-bottom:50px;
   width:800px;
+}
+
+#filters {
+  position: fixed;
 }
