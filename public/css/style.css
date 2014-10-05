@@ -86,3 +86,7 @@ ul {
 .mainimage {
   margin-top:40px;
 }
+
+.mainimage img {
+  max-height: 650px;
+}
