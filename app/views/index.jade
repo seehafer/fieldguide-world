@@ -1,9 +1,9 @@
 extends layout
 
 block content
-  h2.col-md-offset-1.col-md-11.title Birds of the San Francisco Bay Area
+  h2.col-xs-offset-1.col-xs-11.col-md-offset-1.col-md-11.title Birds of San Francisco
   .clearfix
-  #filters
+  #filters.col-xs-3.col-sm-2.col-md-1
     p.clearfix
     #size-filter.btn-group-vertical
       button.btn.btn-default.active(data-filter='*') show all
@@ -23,7 +23,7 @@ block content
       button.btn.btn-default(data-filter='[data-color*=grey]') grey
       button.btn.btn-default(data-filter='[data-color*=brown]') brown
       button.btn.btn-default(data-filter='[data-color*=white]') white
-  #items.col-md-11.col-md-offset-1
+  #items.col-xs-9.col-xs-offset-3.col-sm-10.col-sm-offset-2.col-md-11.col-md-offset-1
     each bird in birds
       div.bird(data-commonality="#{bird.commonality}", data-fun-fact="#{bird.fun_fact}", data-size="#{bird.size}", data-color="#{bird.color}")
         a.bird_link(href="javaScript:void(0);", title="Fun Fact", tabindex=100, data-toggle="popover", data-trigger="focus", data-content="#{bird.fun_fact}", data-placement="top")

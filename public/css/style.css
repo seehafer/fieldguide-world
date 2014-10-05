@@ -9,6 +9,16 @@
   max-height: 300px;
 }
 
+
+@media (max-width: 991px) { 
+  .bird img {
+    width: 250px;
+    max-height: 250px;
+  }
+}
+
+
+
 .bird > * {
   margin: 0;
   padding: 0;
