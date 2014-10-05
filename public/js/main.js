@@ -45,7 +45,7 @@ $(window).load( function() {
     });
   });
   
-  $('img').capty();
+  $('img').capty({ animation: 'fade', speed: 100});
   
 
   var Bird = Backbone.Model.extend();
