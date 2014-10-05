@@ -1,7 +1,7 @@
 $(window).load( function() {
   // init Isotope
   var $container = $('#items').isotope({
-    itemSelector: '.bird',
+    itemSelector: '.photo',
     layoutMode: 'masonry',
   });
 
@@ -46,7 +46,7 @@ $(window).load( function() {
 
   $('img').capty({ animation: 'fade', speed: 100});
 
-  $('.bird_link').popover({container: 'body', html: true}); // fun-facts
+  $('.photo_link').popover({container: 'body', html: true}); // fun-facts
 
   // var Bird = Backbone.Model.extend();
   // Bird.Collection = Backbone.Collection.extend({

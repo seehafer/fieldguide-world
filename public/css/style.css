@@ -1,17 +1,17 @@
-.bird {
+.photo {
   position: relative;
   float: left;
   padding: 3px;
 }
 
-.bird img {
+.photo img {
   width: 300px;
   max-height: 300px;
 }
 
 
-@media (max-width: 991px) { 
-  .bird img {
+@media (max-width: 991px) {
+  .photo img {
     width: 250px;
     max-height: 250px;
   }
@@ -19,7 +19,7 @@
 
 
 
-.bird > * {
+.photo > * {
   margin: 0;
   padding: 0;
 }
@@ -44,8 +44,8 @@ ul {
   width:800px;
 }
 
-.bird_link {
-  display:inline-block;
+.photo_link {
+  display: inline-block;
 }
 
 #filters {

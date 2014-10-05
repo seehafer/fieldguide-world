@@ -2,11 +2,10 @@ var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
   Bird = mongoose.model('Bird'),
-  Infra = mongoose.model('Infra'),
   _ = require('underscore')._;
 
 module.exports = function (app) {
-  app.use('/', router);
+  app.use('/birds/', router);
 };
 
 router.get('/', function (req, res, next) {
@@ -61,8 +60,11 @@ router.post('/edit/:id/', function (req, res, next) {
   })
 });
 
-router.get('/bird/', function (req, res, next) {
-  Bird.find(function (err, birds) {
-    res.json(birds);
-  })
-});
+
+// JSON API
+
+// router.get('/bird/', function (req, res, next) {
+//   Bird.find(function (err, birds) {
+//     res.json(birds);
+//   })
+// });
