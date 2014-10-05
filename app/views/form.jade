@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  .row
+    .col-md-6.col-md-offset-3
+      h1 Add a bird!
+      form(method="POST")
+        .form-group
+          label Name:
+          input.form-control(type='text', name='name', placeholder='Crow' value="#{bird.name}")
+        .form-group
+          label Description:
+          input.form-control(type='text', name='description', placeholder='Something interesting...', value="#{bird.description}")
+        .form-group
+          label Fun Fact:
+          input.form-control(type='text', name='fun_fact', placeholder='Did you know this bird is actually a dinosaur???', value="#{bird.fun_fact}")
+        .form-group
+          label Photo url:
+          input.form-control(type='text', name='photo_url', placeholder='http://...', value="#{bird.photo_url}")
+
+        .form-group
+          label Commonality (0-100):
+          input.form-control(type='text', name='commonality', placeholder='0', value="#{bird.commonality}")
+
+        .form-group
+          label Colors (Cmd-click to select multiple):
+          select.form-control(multiple="true", name="color")
+            each color in colors
+              if (bird.color.indexOf(color) > -1)
+                option(selected)= color
+              else
+                option= color
+
+        .form-group
+          label Size
+          select.form-control(name="size")
+            each size in sizes
+              if (bird.size === size)
+                option(selected)= size
+              else
+                option= size
+
+        button.btn.btn-default(type="submit") Submit
