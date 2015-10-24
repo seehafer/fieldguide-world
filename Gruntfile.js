@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     watch: {
       options: {
         nospawn: true,
-        livereload: reloadPort
+        //livereload: reloadPort
       },
       js: {
         files: [
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
           'app/views/*.jade',
           'app/views/**/*.jade'
         ],
-        options: { livereload: reloadPort }
+        //options: { livereload: reloadPort }
       },
       public_js: {
         files: ['public/js/**'],
