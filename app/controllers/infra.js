@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
   Infra.find(function (err, infras) {
     if (err) return next(err);
     res.render('infra', {
-      title: 'Pocket Doug',
+      title: 'Field Guide to the World | Infrastructure',
       infras: infras,
       types: Infra.types
     });

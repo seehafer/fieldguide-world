@@ -15,7 +15,7 @@ router.get('/', function (req, res, next) {
 
     Bird.colors(function (err, colors) {
       res.render('birds', {
-        title: 'Pocket Doug',
+        title: 'Field Guide to the World | Birds',
         birds: birds,
         colors: colors
       });

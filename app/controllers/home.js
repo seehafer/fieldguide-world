@@ -8,6 +8,6 @@ module.exports = function (app) {
 
 router.get('/', function (req, res, next) {
   res.render('index', {
-    title: 'Pocket Doug'
+    title: 'Field Guide to the World'
   });
 });
