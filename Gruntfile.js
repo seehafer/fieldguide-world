@@ -28,7 +28,7 @@ module.exports = function (grunt) {
           'app/**/*.js',
           'config/*.js'
         ],
-        tasks: ['develop', 'delayed-livereload']
+        tasks: ['develop']
       },
       views: {
         files: [
@@ -39,11 +39,11 @@ module.exports = function (grunt) {
       },
       public_js: {
         files: ['public/js/**'],
-        tasks: ['develop', 'delayed-livereload']
+        tasks: ['develop']
       },
       bower: {
         files: ['bower.json'],
-        tasks: ['bower-install', 'bower_concat', 'delayed-livereload']
+        tasks: ['bower-install', 'bower_concat']
       }
     },
     "bower-install-simple": {
@@ -86,20 +86,6 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.registerTask("bower-install", [ "bower-install-simple" ]);
-
-  grunt.registerTask('delayed-livereload', 'Live reload after the node server has restarted.', function () {
-    var done = this.async();
-    setTimeout(function () {
-      request.get('http://localhost:' + reloadPort + '/changed?files=' + files.join(','),  function(err, res) {
-          var reloaded = !err && res.statusCode === 200;
-          if (reloaded)
-            grunt.log.ok('Delayed live reload successful.');
-          else
-            grunt.log.error('Unable to make a delayed live reload.');
-          done(reloaded);
-        });
-    }, 500);
-  });
 
   grunt.registerTask('default', ['develop', 'watch']);
 
